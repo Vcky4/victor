@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/victor-portfolio/',
+  base: '/victor/',
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
