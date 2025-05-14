@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useInView } from '../hooks/useInView';
-import { Code, Smartphone, Layers, Users, Server, Cloud } from 'lucide-react';
+import { Code, Smartphone, Layers, Users, Server, Cloud, Database } from 'lucide-react';
 
 const About: React.FC = () => {
   const { ref, inView } = useInView({ threshold: 0.1 });
@@ -31,7 +31,7 @@ const About: React.FC = () => {
             </p>
           </div>
           
-          <div className={`grid sm:grid-cols-2 gap-6 transition-all duration-700 delay-200 ${inView ? 'opacity-100' : 'opacity-0 translate-x-8'}`}>
+          <div className="grid sm:grid-cols-2 gap-6 transition-all duration-700 delay-200 ${inView ? 'opacity-100' : 'opacity-0 translate-x-8'}">
             <div className="bg-background-dark p-6 rounded-xl hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 transform hover:-translate-y-2 cursor-pointer group">
               <Code className="text-primary mb-4 group-hover:scale-110 transition-transform duration-300" size={36} />
               <h3 className="text-xl font-semibold mb-2">Frontend Development</h3>
@@ -54,6 +54,18 @@ const About: React.FC = () => {
               <Cloud className="text-primary mb-4 group-hover:scale-110 transition-transform duration-300" size={36} />
               <h3 className="text-xl font-semibold mb-2">DevOps & Cloud</h3>
               <p className="text-text-secondary">Implementing CI/CD pipelines, container orchestration, and cloud infrastructure.</p>
+            </div>
+
+            <div className="bg-background-dark p-6 rounded-xl hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 transform hover:-translate-y-2 cursor-pointer group">
+              <Database className="text-primary mb-4 group-hover:scale-110 transition-transform duration-300" size={36} />
+              <h3 className="text-xl font-semibold mb-2">Database Architecture</h3>
+              <p className="text-text-secondary">Designing and optimizing database schemas for scalable applications.</p>
+            </div>
+
+            <div className="bg-background-dark p-6 rounded-xl hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 transform hover:-translate-y-2 cursor-pointer group">
+              <Users className="text-primary mb-4 group-hover:scale-110 transition-transform duration-300" size={36} />
+              <h3 className="text-xl font-semibold mb-2">Team Leadership</h3>
+              <p className="text-text-secondary">Mentoring developers and leading teams to deliver high-quality products.</p>
             </div>
           </div>
         </div>

@@ -17,21 +17,20 @@ const Contact: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch(`mailto:vicksoson@gmail.com?subject=Portfolio Contact: ${formData.name}&body=${formData.message}%0D%0A%0D%0AFrom: ${formData.email}`);
       setSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
-      
-      // Reset the submitted state after 5 seconds
-      setTimeout(() => {
-        setSubmitted(false);
-      }, 5000);
-    }, 1500);
+    } catch (error) {
+      console.error('Error sending email:', error);
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitted(false), 5000);
+    }
   };
 
   return (
@@ -50,15 +49,15 @@ const Contact: React.FC = () => {
             
             <div className="flex items-center mb-6">
               <Mail className="text-primary mr-4" size={24} />
-              <a href="mailto:victor@example.com" className="text-text-secondary hover:text-primary transition-colors">
-                victor@example.com
+              <a href="mailto:vicksoson@gmail.com" className="text-text-secondary hover:text-primary transition-colors">
+                vicksoson@gmail.com
               </a>
             </div>
             
             <div className="flex items-center mb-6">
               <Linkedin className="text-primary mr-4" size={24} />
               <a 
-                href="https://linkedin.com" 
+                href="https://linkedin.com/in/vicksoson" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-primary transition-colors flex items-center"
@@ -71,7 +70,7 @@ const Contact: React.FC = () => {
             <div className="flex items-center mb-6">
               <Github className="text-primary mr-4" size={24} />
               <a 
-                href="https://github.com" 
+                href="https://github.com/vcky4" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-primary transition-colors flex items-center"
