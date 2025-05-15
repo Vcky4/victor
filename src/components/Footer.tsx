@@ -31,13 +31,13 @@ const Footer: React.FC = () => {
           </p>
           
           <div className="flex gap-6">
-            <a href="mailto:victor@example.com" className="text-text-secondary hover:text-primary transition-colors">
+            <a href="mailto:vicksoson@gmail.com" className="text-text-secondary hover:text-primary transition-colors">
               <Mail size={20} />
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-primary transition-colors">
+            <a href="https://github.com/vcky4" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-primary transition-colors">
               <Github size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-primary transition-colors">
+            <a href="https://linkedin.com/in/vicksoson" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-primary transition-colors">
               <Linkedin size={20} />
             </a>
           </div>
