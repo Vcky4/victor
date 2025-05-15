@@ -29,6 +29,24 @@ export const projects: Project[] = [
   },
   {
     id: 3,
+    title: "Palkeeper",
+    description: "A comprehensive password management solution with end-to-end encryption, secure sharing, and cross-platform synchronization.",
+    image: "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    technologies: ["React", "Node.js", "PostgreSQL", "WebCrypto API", "Docker"],
+    demoLink: "#",
+    codeLink: "#"
+  },
+  {
+    id: 4,
+    title: "Polly Glot",
+    description: "AI-powered language learning platform with real-time translation, pronunciation feedback, and personalized lesson plans.",
+    image: "https://images.pexels.com/photos/267669/pexels-photo-267669.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    technologies: ["React Native", "Python", "TensorFlow", "OpenAI API", "MongoDB"],
+    demoLink: "#",
+    codeLink: "#"
+  },
+  {
+    id: 5,
     title: "TwikkL",
     description: "Social media dashboard for content creators with analytics, scheduling, and engagement tracking across multiple platforms.",
     image: "https://images.pexels.com/photos/3184356/pexels-photo-3184356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -37,7 +55,7 @@ export const projects: Project[] = [
     codeLink: "#"
   },
   {
-    id: 4,
+    id: 6,
     title: "HealthTrack",
     description: "Health monitoring application with fitness tracking, meal planning, and integration with various health wearables.",
     image: "https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",

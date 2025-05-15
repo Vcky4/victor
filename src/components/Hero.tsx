@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Github, Linkedin, ArrowDown } from 'lucide-react';
+import { Github, Linkedin, ArrowDown, FileDown } from 'lucide-react';
+import { generateCV } from '../utils/cvGenerator';
 
 const Hero: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,6 +18,10 @@ const Hero: React.FC = () => {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
+
+  const handleDownloadCV = async () => {
+    await generateCV();
+  };
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -56,8 +61,15 @@ const Hero: React.FC = () => {
             >
               Get in Touch
             </a>
+            <button
+              onClick={handleDownloadCV}
+              className="btn btn-outline transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+            >
+              <FileDown size={18} />
+              Download CV
+            </button>
             <a 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/in/vicksoson" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn btn-outline transform hover:scale-105 transition-all duration-300"
@@ -69,7 +81,7 @@ const Hero: React.FC = () => {
 
           <div className="flex mt-12 gap-6">
             <a 
-              href="https://github.com" 
+              href="https://github.com/vcky4" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-text-secondary hover:text-primary transition-colors transform hover:scale-110 duration-300"
@@ -77,7 +89,7 @@ const Hero: React.FC = () => {
               <Github size={24} />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/in/vicksoson" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-text-secondary hover:text-primary transition-colors transform hover:scale-110 duration-300"
