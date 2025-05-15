@@ -7,7 +7,8 @@ const Certifications: React.FC = () => {
   const { ref, inView } = useInView({ threshold: 0.1 });
 
   return (
-    <section id="certifications" className="bg-background-dark py-20">
+    <section id="certifications" className="bg-background-dark py-5">
+       {/* @ts-ignore */}
       <div className="container-section" ref={ref}>
         <h2 className={`section-title transition-all duration-700 ${inView ? 'opacity-100' : 'opacity-0 -translate-y-8'}`}>
           Certifications

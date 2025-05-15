@@ -7,7 +7,8 @@ const WorkExperience: React.FC = () => {
   const { ref, inView } = useInView({ threshold: 0.1 });
 
   return (
-    <section id="experience" className="bg-background-light py-20">
+    <section id="experience" className="bg-background-light py-5">
+      {/* @ts-ignore */}
       <div className="container-section" ref={ref}>
         <h2 className={`section-title transition-all duration-700 ${inView ? 'opacity-100' : 'opacity-0 -translate-y-8'}`}>
           Work Experience
@@ -17,14 +18,13 @@ const WorkExperience: React.FC = () => {
           {experiences.map((experience, index) => (
             <div
               key={experience.id}
-              className={`relative pl-8 transition-all duration-700 ${
-                inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
-              }`}
+              className={`relative pl-8 transition-all duration-700 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+                }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               {/* Timeline line */}
               <div className="absolute left-0 top-0 h-full w-px bg-primary/30"></div>
-              
+
               {/* Timeline dot */}
               <div className="absolute left-[-8px] top-2 w-4 h-4 rounded-full bg-primary"></div>
 

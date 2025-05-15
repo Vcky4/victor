@@ -25,7 +25,7 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="bg-background-light py-20">
+    <section id="skills" className="bg-background-light py-5">
       <div className="container-section" ref={ref}>
         <h2 className={`section-title transition-all duration-700 ${inView ? 'opacity-100' : 'opacity-0 -translate-y-8'}`}>
           Skills & Expertise

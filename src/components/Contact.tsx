@@ -20,7 +20,7 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       const response = await fetch(`mailto:vicksoson@gmail.com?subject=Portfolio Contact: ${formData.name}&body=${formData.message}%0D%0A%0D%0AFrom: ${formData.email}`);
       setSubmitted(true);
@@ -34,31 +34,32 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="bg-background-dark py-20">
+    <section id="contact" className="bg-background-dark py-5">
+      {/* @ts-ignore */}
       <div className="container-section" ref={ref}>
         <h2 className={`section-title transition-all duration-700 ${inView ? 'opacity-100' : 'opacity-0 -translate-y-8'}`}>
           Get In Touch
         </h2>
-        
+
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className={`transition-all duration-700 delay-100 ${inView ? 'opacity-100' : 'opacity-0 -translate-x-8'}`}>
             <p className="text-lg mb-8 text-text-secondary leading-relaxed">
-              I'm always open to discussing new projects, opportunities, or collaborations. 
+              I'm always open to discussing new projects, opportunities, or collaborations.
               Whether you have a question or just want to say hello, feel free to reach out!
             </p>
-            
+
             <div className="flex items-center mb-6">
               <Mail className="text-primary mr-4" size={24} />
               <a href="mailto:vicksoson@gmail.com" className="text-text-secondary hover:text-primary transition-colors">
                 vicksoson@gmail.com
               </a>
             </div>
-            
+
             <div className="flex items-center mb-6">
               <Linkedin className="text-primary mr-4" size={24} />
-              <a 
-                href="https://linkedin.com/in/vicksoson" 
-                target="_blank" 
+              <a
+                href="https://linkedin.com/in/vicksoson"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-primary transition-colors flex items-center"
               >
@@ -66,12 +67,12 @@ const Contact: React.FC = () => {
                 <ExternalLink className="ml-1" size={16} />
               </a>
             </div>
-            
+
             <div className="flex items-center mb-6">
               <Github className="text-primary mr-4" size={24} />
-              <a 
-                href="https://github.com/vcky4" 
-                target="_blank" 
+              <a
+                href="https://github.com/vcky4"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-primary transition-colors flex items-center"
               >
@@ -80,8 +81,8 @@ const Contact: React.FC = () => {
               </a>
             </div>
           </div>
-          
-          <div className={`transition-all duration-700 delay-200 ${inView ? 'opacity-100' : 'opacity-0 translate-x-8'}`}>
+
+          <div className={`transition-all duration-700 delay-200 ${inView ? 'opacity-100' : 'opacity-0 -translate-x-8'}`}>
             {submitted ? (
               <div className="bg-background-light p-8 rounded-xl border-2 border-primary/30 animate-fade-in">
                 <h3 className="text-xl font-semibold text-primary mb-3">Thank You!</h3>
@@ -103,7 +104,7 @@ const Contact: React.FC = () => {
                     className="w-full bg-background-dark border border-gray-700 rounded-md px-4 py-3 text-text-primary focus:outline-none focus:ring-2 focus:ring-primary/50"
                   />
                 </div>
-                
+
                 <div className="mb-6">
                   <label htmlFor="email" className="block text-text-secondary mb-2">Email</label>
                   <input
@@ -116,7 +117,7 @@ const Contact: React.FC = () => {
                     className="w-full bg-background-dark border border-gray-700 rounded-md px-4 py-3 text-text-primary focus:outline-none focus:ring-2 focus:ring-primary/50"
                   />
                 </div>
-                
+
                 <div className="mb-6">
                   <label htmlFor="message" className="block text-text-secondary mb-2">Message</label>
                   <textarea
@@ -129,7 +130,7 @@ const Contact: React.FC = () => {
                     className="w-full bg-background-dark border border-gray-700 rounded-md px-4 py-3 text-text-primary focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
                   ></textarea>
                 </div>
-                
+
                 <button
                   type="submit"
                   disabled={isSubmitting}
