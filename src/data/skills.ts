@@ -43,13 +43,13 @@ export const skills: SkillCategory[] = [
     ]
   },
   {
-    category: "AI & Machine Learning",
+    category: "AI Engineering",
     items: [
-      { name: "TensorFlow", proficiency: 4 },
-      { name: "PyTorch", proficiency: 4 },
-      { name: "Natural Language Processing", proficiency: 4 },
-      { name: "Computer Vision", proficiency: 3 },
+      { name: "AI System Architecture", proficiency: 4 },
+      { name: "ML Model Deployment", proficiency: 4 },
+      { name: "AI API Integration", proficiency: 5 },
       { name: "MLOps", proficiency: 4 },
+      { name: "AI Solution Design", proficiency: 4 },
     ]
   },
   {
