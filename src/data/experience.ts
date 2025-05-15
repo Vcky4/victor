@@ -12,7 +12,7 @@ export const experiences: Experience[] = [
     id: 1,
     role: "Development Practice Lead",
     company: "Enbros Technologies",
-    period: "January 2022 - Present",
+    period: "November 2024 - Present",
     responsibilities: [
       "Lead and mentor a team of 12+ developers across multiple projects",
       "Architect and implement scalable solutions using React, React Native, and cloud services",
@@ -30,8 +30,8 @@ export const experiences: Experience[] = [
   {
     id: 2,
     role: "Senior Software Engineer",
-    company: "Tech Solutions Inc.",
-    period: "June 2019 - December 2021",
+    company: "Cakkie Foods Ltd.",
+    period: "June 2022 - January 2025",
     responsibilities: [
       "Led development of cross-platform mobile applications using React Native",
       "Designed and implemented microservices architecture",
@@ -47,8 +47,8 @@ export const experiences: Experience[] = [
   {
     id: 3,
     role: "Full Stack Developer",
-    company: "Digital Innovations Ltd",
-    period: "March 2017 - May 2019",
+    company: "Ukemy INC",
+    period: "March 2021 - May 2022",
     responsibilities: [
       "Developed and maintained web applications using React and Node.js",
       "Implemented RESTful APIs and database solutions",
@@ -60,5 +60,40 @@ export const experiences: Experience[] = [
       "Improved application performance by 50%",
       "Implemented automated testing reducing bugs by 35%"
     ]
-  }
+  },
+
+  {
+    id: 5,
+    role: "Android Developer",
+    company: "Azabox Finance",
+    period: "March 2020 - June 2021",
+    responsibilities: [
+      "Developed and maintained Android applications",
+      "Collaborated with cross-functional teams to define, design, and ship new features",
+      "Ensured performance, quality, and responsiveness of applications"
+    ],
+    achievements: [
+      "Increased app downloads by 200% through effective marketing strategies",
+      "Implemented offline functionality improving user experience in low connectivity areas"
+    ]
+  },
+
+  {
+    id: 4,
+    role: "Android Developer Intern",
+    company: "Zuri Chat",
+    period: "September 2018 - February 2019",
+    responsibilities: [
+      "Assisted in the development of mobile applications",
+      "Conducted testing and debugging of applications",
+      "Collaborated with senior developers on various projects"
+    ],
+    achievements: [
+      "Contributed to the successful launch of a new feature in the Zuri Chat app",
+      "Gained hands-on experience in mobile app development",
+      "Learned best practices in software development and team collaboration"
+    ]
+  },
+
+
 ];
