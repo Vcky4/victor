@@ -6,7 +6,7 @@ export interface SkillCategory {
 export interface Skill {
   name: string;
   icon?: string;
-  proficiency: number; // 1-5
+  proficiency: number;
 }
 
 export const skills: SkillCategory[] = [
@@ -40,6 +40,16 @@ export const skills: SkillCategory[] = [
       { name: "Native APIs", proficiency: 4 },
       { name: "Android SDK", proficiency: 4 },
       { name: "iOS Development", proficiency: 3 },
+    ]
+  },
+  {
+    category: "AI & Machine Learning",
+    items: [
+      { name: "TensorFlow", proficiency: 4 },
+      { name: "PyTorch", proficiency: 4 },
+      { name: "Natural Language Processing", proficiency: 4 },
+      { name: "Computer Vision", proficiency: 3 },
+      { name: "MLOps", proficiency: 4 },
     ]
   },
   {
