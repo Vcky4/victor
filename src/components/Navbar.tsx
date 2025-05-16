@@ -30,6 +30,7 @@ const Navbar: React.FC = () => {
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
+    { name: 'CV Generator', href: '#cv-generator' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -88,4 +89,4 @@ const Navbar: React.FC = () => {
   );
 };
 
-export default Navbar
+export default Navbar;
